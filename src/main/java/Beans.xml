@@ -5,8 +5,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="helloWorld" class="HelloWorld">
-        <property name="message" value="Hello World!"/>
-    </bean>
+    <bean id="sonet29" class="Sonet29"/>
+
+    <bean id="theStage" class="Stage"
+          factory-method="getInstance"/>
+
+    <bean id="duke" class="PoeticJuggler">
+    <constructor-arg value="15"/>
+    <constructor-arg ref="sonet29"/>
+        </bean>
+
+
 
 </beans>
